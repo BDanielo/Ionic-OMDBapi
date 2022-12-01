@@ -1,0 +1,7 @@
+{
+  "name": "serie-films",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

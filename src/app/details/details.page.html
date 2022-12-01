@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <a [routerLink]="['/recherche/']">⬅️</a> Details
+      
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <h2>Detail : {{search.Title}}</h2>
+    <img alt="photo" src={{search.Poster}} />
+    <div *ngFor="let key of cles">
+      <div *ngIf="key!=='Poster' && key!=='Ratings' && key!=='Response' && key!=='imdbID' && key!=='Title'">
+      <p *ngIf="search[key]!=='N/A'">{{key}} : {{search[key]}}</p>
+      </div>
+    </div>
+
+  </ion-card>
+</ion-content>

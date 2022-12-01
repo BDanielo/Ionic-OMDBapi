@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Films</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar [(ngModel)]="rechercheTitre">
+    
+  </ion-searchbar>
+  <ion-button (click)="chargerFilms()">
+    Recherche
+  </ion-button>
+
+  <ion-list>
+    <ion-item *ngFor="let film of films">
+      <ion-card>
+        <ion-grid>
+         <ion-row>
+          <ion-col>
+          <img alt="photo" src={{film.Poster}} />
+        </ion-col>
+        <ion-col>
+        <ion-item>
+          <h2>{{film.Title}}</h2>
+        </ion-item> 
+        <ion-card-content>
+          <p>{{film.Year}}</p>
+          <p>{{film.Type}}</p>
+        </ion-card-content>
+        </ion-col>
+         </ion-row>
+        </ion-grid>
+      
+      </ion-card>
+      
+    </ion-item>
+  </ion-list>
+
+  <ion-card>
+
+  </ion-card>
+</ion-content>
